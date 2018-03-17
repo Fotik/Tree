@@ -61,7 +61,7 @@
                                         <nil key="textColor"/>
                                         <nil key="highlightedColor"/>
                                     </label>
-                                    <stepper opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" maximumValue="100" stepValue="10" translatesAutoresizingMaskIntoConstraints="NO" id="dhj-GQ-Bzv">
+                                    <stepper opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" maximumValue="300" stepValue="20" translatesAutoresizingMaskIntoConstraints="NO" id="dhj-GQ-Bzv">
                                         <rect key="frame" x="185" y="55" width="94" height="29"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMinX="YES" flexibleMaxY="YES"/>
                                         <connections>
@@ -95,7 +95,7 @@
                                             <action selector="onVisibilitySwitch:" destination="BYZ-38-t0r" eventType="valueChanged" id="J54-0S-C01"/>
                                         </connections>
                                     </switch>
-                                    <stepper opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="1" maximumValue="100" stepValue="10" translatesAutoresizingMaskIntoConstraints="NO" id="Lpt-6p-8Dm">
+                                    <stepper opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="1" maximumValue="1" stepValue="0.10000000000000001" translatesAutoresizingMaskIntoConstraints="NO" id="Lpt-6p-8Dm">
                                         <rect key="frame" x="241" y="151" width="94" height="29"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMinX="YES" flexibleMinY="YES"/>
                                         <connections>
@@ -118,7 +118,9 @@
                     </view>
                     <connections>
                         <outlet property="sizeLabel" destination="aTe-D7-UTd" id="H4I-XA-EW5"/>
+                        <outlet property="sizeStepper" destination="dhj-GQ-Bzv" id="xbF-te-raD"/>
                         <outlet property="treeImage" destination="YIp-ss-0ce" id="e1J-jJ-bgJ"/>
+                        <outlet property="treeView" destination="Hhj-Ya-2X4" id="J47-N9-hdh"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
