@@ -27,8 +27,8 @@ class ViewController: UIViewController {
     }
     
     @IBAction func onSizeValueChanged(_ sender: UIStepper) {
-        self.treeImage.setValue(sender.value, forKey: "width")
-        self.sizeLabel.setValue(sender.value, forKey: "text")
+        self.treeImage.bounds.size.width = CGFloat(sender.value)
+        self.sizeLabel.text = String(sender.value)
         self.calibrateOffsetSlider()
     }
     
@@ -40,19 +40,19 @@ class ViewController: UIViewController {
     }
     
     @IBAction func onVisibilitySwitch(_ sender: UISwitch) {
-        self.treeImage.setValue(sender.state.rawValue, forKey: "alpha")
+        self.treeImage.alpha = CGFloat(sender.isOn ? 1 : 0)
     }
     
     @IBAction func onVisibilityValueChanged(_ sender: UIStepper) {
-        self.treeImage.setValue(sender.value, forKey: "alpha")
+        self.treeImage.alpha = CGFloat(sender.value)
     }
     
     override func viewDidLoad() {
         super.viewDidLoad()
         
         self.calibrateOffsetSlider()
-        self.sizeLabel.setValue(self.treeImage.frame.width, forKey: "text")
-        self.sizeStepper.setValue(self.treeImage.frame.width, forKey: "value")
+        self.sizeLabel.text = String(describing: self.treeImage.frame.width)
+        self.sizeStepper.value = Double(self.treeImage.frame.width)
     }
 
     private func calibrateOffsetSlider()
